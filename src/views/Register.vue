@@ -1,8 +1,13 @@
 <template>
-        <h1>Bem-Vindo</h1>
+    <div class="container mt-5">
+      <br>
+        <h1>Leilões Start</h1>
     <div class="container-sm">
       <form @submit.prevent="register">
         <h2 class="mb-3">Registrar</h2>
+
+      <div class="card col-lg-5 ">
+      <div class="card-body">
         <div class="input">
           <label for="email">Email</label>
           <input
@@ -23,7 +28,11 @@
             placeholder="senha123"
           />
         </div>
+        
+      </div>
+      </div>
         <br>
+      
         <p v-if="errMsg">{{ errMsg }}</p>
         <div class="alternative-option mt-4">
           Já tem uma conta ? <span><a href="/">Login</a></span>
@@ -35,10 +44,12 @@
         
       </form>
     </div>
+  </div>
   </template>
   
   <script setup>
-  
+
+
   import {ref} from 'vue'
   import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useRouter } from 'vue-router';
@@ -68,9 +79,30 @@ import { useRouter } from 'vue-router';
       }
     })
   }
+
+  
+  </script>
+
+  <script>
+  export default{
+    created() {
+  document.body.style.backgroundColor = '#cfcfcf'
+  },
+  }
   </script>
 
 <style scoped>
+body, html {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 100%; 
+  background-color: red;
+
+}
+body{
+  background-color: turquoise;
+}
 h2 {
     display: block;
     font-size: 1.5em;
@@ -80,7 +112,11 @@ h2 {
     margin-inline-end: 0px;
     font-weight: bold;
 }
-
+.card {
+        margin: 0 auto; 
+        float: none;  
+        margin-bottom: 10px;
+}
 span{
     text-decoration: underline;
 }

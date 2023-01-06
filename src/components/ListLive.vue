@@ -1,7 +1,7 @@
 <template>
 <div class="card" style="width: 18rem;" id="center">
   <div class="card-header bold">
-    Leilões ao vivo
+    Leilões Ao Vivo 🔴
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">Cras justo odio</li>
@@ -24,7 +24,7 @@
   position: absolute;
   top: 30%; 
   margin-top: -25px; 
-  left: 65%; 
+  left: 30%; 
   margin-left: -100px; 
 }
 

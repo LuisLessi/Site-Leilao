@@ -19,7 +19,10 @@ export default {
         ListLive: ListLive,
         ListScheduled: ListScheduled,
         Footer: Footer
-    }
+    },
+    created() {
+  document.body.style.backgroundColor = '#cfcfcf'
+},
 }
 </script>
 

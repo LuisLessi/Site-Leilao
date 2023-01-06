@@ -1,7 +1,7 @@
 <template>
     <div class="card" style="width: 18rem;" id="center">
       <div class="card-header bold">
-        Leilões agendados
+       Próximos Leilões 📅
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">Cras justo odio</li>
@@ -24,9 +24,11 @@
   position: absolute;
   top: 30%; 
   margin-top: -25px; 
-  left: 30%; 
+  left: 65%; 
   margin-left: -100px; 
+  
 }
+
 @media only screen and (max-width: 1024px) {
 
 #center {

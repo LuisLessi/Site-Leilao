@@ -1,15 +1,15 @@
 <template>
 
 <footer id="footer">
-    <p>Dix Digital, Inc &copy; 2023</p>
+    <p>Leilões Start, Inc &copy; 2023</p>
     <br>
     <ul class='social_list '>
     <li>
-        <a class="icons" href="https://www.facebook.com/DIXXDIGITAL"><font-awesome-icon :icon="['fab', 'facebook']" /></a>
+        <a class="icons" target="_blank" href="https://www.facebook.com/DIXXDIGITAL"><font-awesome-icon :icon="['fab', 'facebook']" /></a>
     </li>
-        <a class="icons" href="https://www.instagram.com/_dixdigital/"><font-awesome-icon :icon="['fab', 'instagram']" /></a>
+        <a class="icons" target="_blank" href="https://www.instagram.com/_dixdigital/"><font-awesome-icon :icon="['fab', 'instagram']" /></a>
     <li>
-    <a class="icons" href="https://www.linkedin.com/company/dixdigital/"><font-awesome-icon :icon="['fab', 'linkedin']"/></a>
+    <a class="icons" target="_blank" href="https://www.linkedin.com/company/dixdigital/"><font-awesome-icon :icon="['fab', 'linkedin']"/></a>
     </li>
     </ul>
 </footer>

@@ -1,9 +1,15 @@
 <template>
-    <h1>Bem-Vindo</h1>
+    <div class="container mt-5">
+      <br>
+    <h1>Leilões Start</h1>
     <div class="container">
       <form @submit.prevent="login">
         <h2 class="mb-3 ">Login</h2>
+
+      <div class="card col-lg-5 ">
+      <div class="card-body">
         <div class="input">
+          <div></div>
           <label for="email">Email</label>
           <input
             v-model="email"
@@ -23,6 +29,8 @@
             placeholder="senha123"
           />
         </div>
+        </div>
+        </div>
         <br>
         <p v-if="errMsg">{{ errMsg }}</p>
         <div class="alternative-option mt-4">
@@ -33,13 +41,14 @@
         </button>
       </form>
     </div>
+  </div>
   </template>
   
   <script setup>
  import {ref} from 'vue'
   import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useRouter } from 'vue-router';
-  
+
 const email = ref("");
   const password = ref("");
   const router = useRouter()
@@ -69,13 +78,26 @@ const email = ref("");
       }
     })
   }
+
   </script>
 
-<style scoped>
-nav{
-  padding: 90px
-}
+  <script>
+  export default{
+    created() {
+  document.body.style.backgroundColor = '#cfcfcf'
+},
+  
+  }
 
+  </script>
+  
+<style scoped>
+
+.card {
+        margin: 0 auto; 
+        float: none;  
+        margin-bottom: 10px;
+}
 h2 {
     display: block;
     font-size: 1.5em;

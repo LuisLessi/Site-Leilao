@@ -6,22 +6,31 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
+
+    <span class="navbar-text">
     <ul class="navbar-nav">
       &nbsp&nbsp&nbsp&nbsp&nbsp
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="/live">Ao vivo</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Ao vivo</a>
+        <a class="nav-link" href="/scheduled">Agendados</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Agendados</a>
-      </li>
-      <li class="nav-item">
-        <a @click="handleSignout" class="nav-link" id="logout" v-if="isLoggedIn">Sair</a>
-      </li>
-     
     </ul>
+    </span>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item navbar-text">
+        <a @click="handleSignout" class="nav-link " id="logout" v-if="isLoggedIn">Sair</a>
+      </li>
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+
+    </ul>
+  
+  </div>
   </div>
 </nav>
   </template>
@@ -56,7 +65,7 @@ const handleSignout = () => {
 <style scoped>
 .icon_home{
   border-radius: 25%;
-  max-width:65px;
+  max-width:55px;
     max-height:100px;
     width: auto;
     height: auto;
@@ -72,6 +81,9 @@ nav{
     cursor: pointer;
 }
 
+a:-webkit-any-link:hover{
+    color: rgb(0, 0, 0);
+}
 @media only screen and (max-width: 1024px) {
 .icon_home{
   margin-left: 22%;

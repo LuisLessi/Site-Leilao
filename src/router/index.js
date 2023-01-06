@@ -3,13 +3,17 @@ import {getAuth, onAuthStateChanged} from "firebase/auth"
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
 import Home from '../views/Home.vue'
+import Live from '../views/LiveAuction.vue'
+import Scheduled from '../views/ScheduledAuction.vue'
 
 
 const routes = [
   {
     path: '/',
     name: 'Login',
-    component: Login
+    component: Login,
+  
+
   },
 
   {
@@ -28,6 +32,17 @@ const routes = [
     },
   },
 
+  {
+    path: '/live',
+    name: 'Live',
+    component: Live
+  },
+
+  {
+    path: '/scheduled',
+    name: 'scheduled',
+    component: Scheduled 
+  },
 
 ]
 
