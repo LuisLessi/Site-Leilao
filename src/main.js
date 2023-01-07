@@ -7,21 +7,22 @@ import bootstrap from '../bootstrap'
 //Firebase config
 
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
+import { initializeApp, initializeAppPj } from "firebase/app";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCU2JOKmpJBBxsZHh0kwiY_ZYBzeifA2EI",
-  authDomain: "login-auth-7d0f7.firebaseapp.com",
-  projectId: "login-auth-7d0f7",
-  storageBucket: "login-auth-7d0f7.appspot.com",
-  messagingSenderId: "289662621943",
-  appId: "1:289662621943:web:df81b4dc463a897f5b5bf2"
+  apiKey: "AIzaSyB0-7_9M0VNSvi-dMpsvA0REDsxVrggK6Y",
+  authDomain: "login-auth-pj.firebaseapp.com",
+  projectId: "login-auth-pj",
+  storageBucket: "login-auth-pj.appspot.com",
+  messagingSenderId: "751265996895",
+  appId: "1:751265996895:web:a676c3b9a567114c9a7bea"
 };
 
-initializeApp(firebaseConfig);
 
 //FontAwesome config
 /* import the fontawesome core */
@@ -38,5 +39,9 @@ import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-sv
 
 /* add icons to the library */
 library.add(fas, faUserSecret, faFacebook, faInstagram, faLinkedin)
+
+  initializeApp(firebaseConfig);
+
+
 
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).use(bootstrap).use(store).use(router).mount('#app')

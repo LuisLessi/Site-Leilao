@@ -1,5 +1,5 @@
 <template>
-    <div class="container mt-5">
+    <div class="container mt-3">
       <br>
     <h1>Leilões Start</h1>
     <div class="container">
@@ -9,7 +9,18 @@
       <div class="card col-lg-5 ">
       <div class="card-body">
         <div class="input">
-          <div></div>
+          <div class="input-block">
+    <label>Selecione o tipo de conta para logar</label><br><br>
+
+    <label>Pessoa Física</label>&nbsp&nbsp<input
+    v-model="tipoForm" name="tipoConta" id="contaA" type="radio" value="PF" checked/>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+    <input
+    v-model="tipoForm" name="tipoConta" id="contaB" type="radio" value="PJ"/>&nbsp&nbsp<label>Pessoa Jurídica</label>
+    
+
+      </div>
           <label for="email">Email</label>
           <input
             v-model="email"

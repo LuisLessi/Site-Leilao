@@ -1,6 +1,5 @@
 <template>
-    <div class="container mt-5">
-      <br>
+    <div class="container mt-1">
         <h1>Leilões Start</h1>
     <div class="container-sm">
       <form @submit.prevent="register">
@@ -27,11 +26,32 @@
             name="password"
             placeholder="senha123"
           />
+
+          
+      <div v-if="tipoForm == 'PF'">
+        <br><label for="email">Digite seu CPF</label>
+          <input
+            class="form-control"
+            type="text"
+            name="cpf"
+            maxlength="11"
+            placeholder="123.456.789.99"
+          />
         </div>
+        <div v-else><br><label for="email">Digite seu CNPJ</label>
+          <input
+            class="form-control"
+            type="text"
+            name="cnpj"
+            maxlength="14"
+            placeholder="123.456.789.99"
+          /></div>
+        </div>
+
+        
         
       </div>
       </div>
-        <br>
       
         <p v-if="errMsg">{{ errMsg }}</p>
         <div class="alternative-option mt-4">
@@ -61,9 +81,10 @@ import { useRouter } from 'vue-router';
 
 
   const register = () => {
+    
     createUserWithEmailAndPassword(getAuth(), email.value, password.value)
     .then((data) =>{
-      console.log("Cadastrado com sucesso")
+      console.log("Cadastrado de pessoa física com sucesso")
       alert("Conta criada com sucesso")
       router.push('/')
     }).catch((err) => {
@@ -75,6 +96,9 @@ import { useRouter } from 'vue-router';
         break;
       case "auth/email-already-in-use":
         errMsg.value = "Email já cadastrado";
+        break;
+        case "auth/weak-password":
+        errMsg.value = "Senha deve ser maior que 6 caracteres";
         break;
       }
     })
@@ -88,6 +112,11 @@ import { useRouter } from 'vue-router';
     created() {
   document.body.style.backgroundColor = '#cfcfcf'
   },
+  data() {
+    return {
+    tipoForm: "PF",
+    }
+  }
   }
   </script>
 
@@ -111,6 +140,10 @@ h2 {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
+}
+.input-block label {
+  font-size: 14px;
+  color: #000000;
 }
 .card {
         margin: 0 auto; 
