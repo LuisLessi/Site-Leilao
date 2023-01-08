@@ -5,7 +5,11 @@
       <form @submit.prevent="register">
         <h2 class="mb-3">Registrar</h2>
 
-      <div class="card col-lg-5 ">
+        <img class="background_img" src="http://patrocinados.estadao.com.br/sodresantoro/wp-content/uploads/sites/74/2018/08/Leilao-sodre.png" alt="">
+        <img class="dix_img" src="../assets/dix.png" alt="">
+
+     
+        <div class="card col-lg-5 ">
       <div class="card-body">
         <div class="input">
           <label for="email">Email</label>
@@ -27,7 +31,18 @@
             placeholder="senha123"
           />
 
-          
+          <div class="input-block mt-2">
+    <label>Selecione o tipo de conta para logar</label><br><br>
+
+    <label>Pessoa Física</label>&nbsp&nbsp<input
+    v-model="tipoForm" name="tipoConta" id="contaA" type="radio" value="PF" checked/>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+    <input
+    v-model="tipoForm" name="tipoConta" id="contaB" type="radio" value="PJ"/>&nbsp&nbsp<label>Pessoa Jurídica</label>
+    
+
+      </div>
       <div v-if="tipoForm == 'PF'">
         <br><label for="email">Digite seu CPF</label>
           <input
@@ -35,7 +50,7 @@
             type="text"
             name="cpf"
             maxlength="11"
-            placeholder="123.456.789.99"
+            placeholder="12345678999"
           />
         </div>
         <div v-else><br><label for="email">Digite seu CNPJ</label>
@@ -44,7 +59,7 @@
             type="text"
             name="cnpj"
             maxlength="14"
-            placeholder="123.456.789.99"
+            placeholder="12345678999999"
           /></div>
         </div>
 
@@ -55,7 +70,9 @@
       
         <p v-if="errMsg">{{ errMsg }}</p>
         <div class="alternative-option mt-4">
-          Já tem uma conta ? <span><a href="/">Login</a></span>
+          &nbsp&nbsp&nbsp&nbsp&nbsp
+          <label style="font-weight: bold">Já tem uma conta ? </label>&nbsp
+          <span><a href="/">Login</a></span>
         </div>
   
         <button @click="register" id="register_button" class="mt-4 btn btn-success">
@@ -110,8 +127,8 @@ import { useRouter } from 'vue-router';
   <script>
   export default{
     created() {
-  document.body.style.backgroundColor = '#cfcfcf'
-  },
+      document.body.style.backgroundColor = '#212047'
+    },
   data() {
     return {
     tipoForm: "PF",
@@ -129,8 +146,27 @@ body, html {
   background-color: red;
 
 }
-body{
-  background-color: turquoise;
+.background_img{
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  top: 0px;
+  left: 26.5%;
+  max-width: 73.4%;
+
+  -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  
+}
+.dix_img{
+  z-index: 1;
+  position: absolute;
+  left: 1%;
+  top: 27%;
+  max-width: 800px;
+ 
 }
 h2 {
     display: block;
@@ -156,5 +192,14 @@ span{
 span:hover{
     cursor: pointer;
 
+}
+
+@media only screen and (max-width: 1024px) {
+  .dix_img{
+   z-index: -1;
+  position: absolute;
+  top: 439px;
+ 
+}
 }
 </style>
