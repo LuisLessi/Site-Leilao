@@ -77,7 +77,6 @@ const email = ref("");
   const login = () => {
     signInWithEmailAndPassword(getAuth(), email.value, password.value)
     .then((data) =>{
-      console.log("Cadastrado com sucesso")
       alert("Logado com sucesso, bem vindo !")
       router.push('/home')
     }).catch((err) => {
@@ -102,9 +101,8 @@ const email = ref("");
   const loginPj = () => {
     signInWithEmailAndPassword(getAuth(), email.value, password.value)
     .then((data) =>{
-      console.log("Cadastrado com sucesso")
       alert("Logado com sucesso, bem vindo !")
-      router.push('/live')
+      router.push('/homePj')
     }).catch((err) => {
       console.log(err)
       switch (err.code){
@@ -129,14 +127,8 @@ const email = ref("");
   export default{
     created() {
       document.body.style.backgroundColor = '#212047'
-
     
 },
-   data() {
-    return {
-    tipoForm: "PF",
-    }
-  }
   }
 
   </script>

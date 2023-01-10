@@ -83,6 +83,10 @@ nav{
 a:-webkit-any-link:hover{
     color: rgb(0, 0, 0);
 }
+.nav-link:hover{
+  color: rgb(0, 0, 0);
+
+ }
 @media only screen and (max-width: 1024px) {
 .icon_home{
   margin-left: 22%;

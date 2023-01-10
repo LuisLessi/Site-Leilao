@@ -1,5 +1,5 @@
 <template>
-    <Navbar/>
+    <NavbarPj/>
     <div class="container">
   <div class="row">
     <div class="col-12">
@@ -59,14 +59,14 @@
 </template>
 
 <script>
-import Navbar from "../components/Navbar.vue"
+import NavbarPj from "../components/NavbarPj.vue"
 import Footer from "../components/Footer.vue"
 import api from '@/services/Auction.js'
 import {onMounted, reactive, toRefs} from 'vue'
 
 export default {
     components: {
-        Navbar: Navbar,
+        NavbarPj: NavbarPj,
         
         Footer: Footer
     },

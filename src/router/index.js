@@ -3,8 +3,11 @@ import {getAuth, onAuthStateChanged} from "firebase/auth"
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
 import Home from '../views/Home.vue'
+import HomePj from '../views/HomePj.vue'
 import Live from '../views/LiveAuction.vue'
+import LivePj from '../views/LiveAuctionPj.vue'
 import Scheduled from '../views/ScheduledAuction.vue'
+import MyBids from '../views/MyBids.vue'
 
 
 const routes = [
@@ -33,15 +36,53 @@ const routes = [
   },
 
   {
+    path: '/homePj',
+    name: 'HomePj',
+    component: HomePj,
+
+    meta: {
+      requireAuth: true
+    },
+  },
+
+  {
     path: '/live',
     name: 'Live',
-    component: Live
+    component: Live,
+
+    meta: {
+      requireAuth: true
+    },
+  },
+
+  {
+    path: '/livePj',
+    name: 'LivePj',
+    component: LivePj,
+
+    meta: {
+      requireAuth: true
+    },
   },
 
   {
     path: '/scheduled',
     name: 'scheduled',
-    component: Scheduled 
+    component: Scheduled,
+    
+    meta: {
+      requireAuth: true
+    },
+  },
+
+  {
+    path: '/myBids',
+    name: 'MyBids',
+    component: MyBids,
+    
+    meta: {
+      requireAuth: true
+    },
   },
 
 ]
