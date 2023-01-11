@@ -7,6 +7,7 @@ import HomePj from '../views/HomePj.vue'
 import Live from '../views/LiveAuction.vue'
 import LivePj from '../views/LiveAuctionPj.vue'
 import Scheduled from '../views/ScheduledAuction.vue'
+import ScheduledPj from '../views/ScheduledAuctionPj.vue'
 import MyBids from '../views/MyBids.vue'
 
 
@@ -60,6 +61,16 @@ const routes = [
     name: 'LivePj',
     component: LivePj,
 
+    meta: {
+      requireAuth: true
+    },
+  },
+
+  {
+    path: '/scheduledPj',
+    name: 'scheduledPj',
+    component: ScheduledPj,
+    
     meta: {
       requireAuth: true
     },

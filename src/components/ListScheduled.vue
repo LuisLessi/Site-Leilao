@@ -4,9 +4,9 @@
        Próximos Leilões 📅
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Vestibulum at eros</li>
+        <li class="list-group-item">LEILÃO ABERTURA DE TEMPORADA 2023 - PROGRAMA E SOMA LEILÕES</li>
+        <li class="list-group-item">1° LEILÃO PARANÁ SENEPOL CD</li>
+        <li class="list-group-item">LEILÃO NELORE EXCELÊNCIA GENÉTICA</li>
       </ul>
     </div>
     </template>

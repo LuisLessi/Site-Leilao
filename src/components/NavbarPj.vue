@@ -15,7 +15,7 @@
          <a class="nav-link" href="/livePj">Ao vivo</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="/scheduled">Agendados</a>
+         <a class="nav-link" href="/scheduledPj">Agendados</a>
        </li>
        <li class="nav-item">
          <a class="nav-link" href="/mybids">Meus lances</a>

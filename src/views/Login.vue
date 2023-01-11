@@ -1,4 +1,5 @@
 <template>
+   <div class="background_mobile">
     <div class="container mt-3">
       <br>
       
@@ -18,7 +19,7 @@
 
     <label>Pessoa Física</label>&nbsp&nbsp<input
     v-model="tipoForm" name="tipoConta" id="contaA" type="radio" value="PF" checked/>
-    &nbsp&nbsp&nbsp&nbsp
+    &nbsp&nbsp
 
     <input
     v-model="tipoForm" name="tipoConta" id="contaB" type="radio" value="PJ"/>&nbsp&nbsp<label>Pessoa Jurídica</label>
@@ -58,10 +59,11 @@
          <div v-else>
           <button @click="loginPj" class="mt-4 btn btn-success" id="login_button">Login</button>
         </div>
-          
       </form>
     </div>
   </div>
+</div>
+
   </template>
   
   <script setup>
@@ -175,5 +177,23 @@ span{
 span:hover{
     cursor: pointer;
 
+}
+@media only screen and (max-width: 1024px) {
+  .dix_img{
+  z-index: -1;
+  display: none;
+}
+.background_img{
+display: none;
+  
+}
+.background_mobile{
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("http://patrocinados.estadao.com.br/sodresantoro/wp-content/uploads/sites/74/2018/08/Leilao-sodre.png");
+  position: absolute;
+
+}
 }
 </style>

@@ -35,10 +35,10 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
-import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook, faInstagram, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
 /* add icons to the library */
-library.add(fas, faUserSecret, faFacebook, faInstagram, faLinkedin)
+library.add(fas, faUserSecret, faFacebook, faInstagram, faLinkedin, faWhatsapp)
 
   initializeApp(firebaseConfig);
 

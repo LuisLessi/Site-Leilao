@@ -1,58 +1,107 @@
 <template>
     <Navbar/>
-    <div class="container">
-  <div class="row">
-    <div class="col-12">
-		<table class="table table-image">
-		  <thead>
-		    <tr>
-		      <th scope="col">ID</th>
-		      <th scope="col">Imagem</th>
-		      <th scope="col">Titulo</th>
-		      <th scope="col">Telefone de contato</th>
-		      <th scope="col">Data/Hora</th>
-		      <th scope="col">Localização</th>
-		    </tr>
-		  </thead>
-		  <tbody>
-		    <tr v-for="(city, key) in cities" :key="key">
-		      <th scope="row">1</th>
-		      <td class="w-25 zoom">
-			      <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/sheep-3.jpg" class="img-fluid img-thumbnail" alt="Sheep">
-		      </td>
-		      <td>Bootstrap 4 CDN and Starter Template</td>
-		      <td>Cristina</td>
-		      <td>913</td>
-		      <td>cuss</td>
-		    </tr>
-		    <tr>
-		      <th scope="row">2</th>
-		      <td class="w-25 zoom">
-			      <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/sheep-5.jpg" class="img-fluid img-thumbnail" alt="Sheep">
-		      </td>
-		      <td>Bootstrap Grid 4 Tutorial and Examples</td>
-		      <td>Cristina</td>
-		      <td>1.434</td>
-		      <td>3.417</td>
-		    </tr>
-        <tr>
-		      <th scope="row">2</th>
-		      <td class="w-25 zoom">
-			      <img src="https://s2.glbimg.com/gWNjnRFrF2rZmJ896Ri-ZHRoFxA=/780x440/e.glbimg.com/og/ed/f/original/2018/08/09/plantel_adir.jpg" alt="Sheep">
-		      </td>
-		      <td>Bootstrap Grid 4 Tutorial and Examples</td>
-		      <td>Cristina</td>
-		      <td>1.434</td>
-		      <td>3.417</td>
-		    </tr>
-		  </tbody>
-		</table>   
+    <IconWhats/>
+	
+	<section class="pt-5 pb-5">
+		<div class="container">
+        <div class="row">
+            <div class="col-3">
+                <h3 class="mb-3">Ao vivo 🔴</h3>
+            </div>
+            <div class="col-6 text-right">
+                <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                    🢀
+                </a>
+				&nbsp&nbsp&nbsp&nbsp&nbsp
+
+                <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+                    🢂
+                </a>
+            </div>
+            <div class="col-12">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="card zoom">
+                                        <img class="img-fluid" alt="100%x280" src="../assets/imgs_auction/leilao_live1.png">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Leilão Mega Shopping de Verão Canal Business.</h4>
+                                        </div>
+										<div class="card-footer ">(67) 2441-1533</div>
+										<div class="card-footer ">Dourados/MS</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card zoom">
+                                        <img class="img-fluid" alt="100%x280" src="../assets/imgs_auction/leilao_live2.jpeg">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Leilão Quatro Amigos & Deleboca</h4>
+                                        </div>
+										<div class="card-footer ">(53) 3354-1645</div>
+										<div class="card-footer ">Bagé/RS</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card zoom">
+                                        <img class="img-fluid" alt="100%x280" src="../assets/imgs_auction/leilao_live3.png">
+                                        <div class="card-body">
+											<h4 class="card-title">1º Ramate Pampa Texel  </h4>
+                                        </div>
+										<div class="card-footer ">(53) 3354-1645</div>
+										<div class="card-footer ">Bagé/RS</div>
+                                    </div>
+                                </div>
+								
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="card zoom">
+                                        <img class="img-fluid" alt="100%x280" src="../assets/imgs_auction/leilao_live4.png">
+                                        <div class="card-body">
+											<h4 class="card-title">Remate Da Quinta</h4>
+                                        </div>
+										<div class="card-footer ">(55) 99974-1064</div>
+										<div class="card-footer ">Ibirapuitã/RS</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card zoom">
+                                        <img class="img-fluid" alt="100%x280" src="../assets/imgs_auction/leilao_live5.jpg">
+                                        <div class="card-body">
+											<h4 class="card-title">SANTA FÉ LEILÕES e SINDICATO RURAL SJRP</h4>
+                                        </div>
+										<div class="card-footer ">(19) 99237-6849</div>
+										<div class="card-footer ">Itobi/SP</div>
+                                    </div>
+                                </div>
+								<div class="col-md-4 mb-3">
+                                    <div class="card zoom">
+                                        <img class="img-fluid" alt="100%x280" src="../assets/imgs_auction/leilao_live6.jpg">
+                                        <div class="card-body">
+											<h4 class="card-title">Pains leilões Online MG</h4>
+                                        </div>
+										<div class="card-footer ">(37) 99981-1246</div>
+										<div class="card-footer ">Pains/MG</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-
-
-
+</section>
  
     <Footer/>
 
@@ -61,54 +110,23 @@
 <script>
 import Navbar from "../components/Navbar.vue"
 import Footer from "../components/Footer.vue"
-import api from '@/services/Auction.js'
-import {onMounted, reactive, toRefs} from 'vue'
+import IconWhats from "../components/iconWhats.vue"
 
 export default {
     components: {
         Navbar: Navbar,
-        
+        IconWhats: IconWhats,
         Footer: Footer
     },
     
-
+	created() {
+  document.body.style.backgroundColor = '#cfcfcf'
+},
 }
 
 </script>
 
 <style scoped>
-.container {
-  padding: 2rem 0rem;
-}
-
-h4 {
-  margin: 2rem 0rem 1rem;
-}
-
-.table-image td{
-  vertical-align: middle;
-
-}
-.table-image th{
-  vertical-align: middle;
-
-}
-.zoom {
-    overflow: hidden;
-}
-
-.zoom img {
-    max-width: 100%;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-.zoom:hover img {
-    -moz-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
 #footer{
     position: relative;
     height: 100px;

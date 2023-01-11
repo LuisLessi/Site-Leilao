@@ -1,5 +1,5 @@
 <template>
-    <Navbar/>
+    <NavbarPj/>
 	<IconWhats/>
     <div class="container">
   <div class="row">
@@ -7,6 +7,7 @@
 		<table class="table table-image">
 		  <thead>
 		    <tr>
+		      <th scope="col">ID</th>
 		      <th scope="col">Imagem</th>
 		      <th scope="col">Titulo</th>
 		      <th scope="col">Telefone de contato</th>
@@ -14,7 +15,7 @@
 		      <th scope="col">Localização</th>
 		    </tr>
 		  </thead>
-		  <tbody>
+          <tbody>
 		    <tr>
 		      <td class="w-25 zoom">
 			      <img src="../assets/imgs_auction/gado_de_corte.jpg" alt="Sheep">
@@ -83,15 +84,16 @@
 </template>
 
 <script>
-import Navbar from "../components/Navbar.vue"
+import NavbarPj from "../components/NavbarPj.vue"
 import Footer from "../components/Footer.vue"
 import api from '@/services/Auction.js'
 import {onMounted, reactive, toRefs} from 'vue'
 import IconWhats from "../components/iconWhats.vue"
 
+
 export default {
     components: {
-        Navbar: Navbar,
+        NavbarPj: NavbarPj,
         IconWhats: IconWhats,
         Footer: Footer
     },

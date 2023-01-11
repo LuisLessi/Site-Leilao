@@ -1,5 +1,6 @@
 <template>
     <NavbarPj/>
+    <IconWhats/>
     <form @submit.prevent="createPost">
 
     <div class="container">
@@ -48,6 +49,8 @@ import NavbarPj from "../components/NavbarPj.vue"
 import Footer from "../components/Footer.vue"
 import Auction from '@/services/Auction.js'
 import {onMounted, reactive, toRefs} from 'vue'
+import IconWhats from "../components/iconWhats.vue"
+
 
 export default {
   data() {
@@ -64,7 +67,7 @@ export default {
   },
     components: {
         NavbarPj: NavbarPj,
-        
+        IconWhats: IconWhats,
         Footer: Footer
     },
     
@@ -91,7 +94,10 @@ export default {
     reader.readAsDataURL(this.$refs.flImage.files[0])
     }
     },
-
+    
+    created() {
+  document.body.style.backgroundColor = '#cfcfcf'
+},
 }
 
 
